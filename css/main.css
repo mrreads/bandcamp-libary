@@ -5,15 +5,32 @@
     box-sizing: border-box;
 }
 
-#albums
+html, body
+{
+    width: 100%;
+	min-width: 320px;
+}
+
+body
 {
     display: flex;
-    flex-flow: row wrap;
     justify-content: center;
     align-items: center;
 }
 
+#albums
+{
+    width: 100%;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+}
+
 iframe
 {
+    height: 300px;
+    width: 300px;
+    flex-grow: 1;
+    border: 0;
     margin: 5px;
 }
