@@ -16,6 +16,7 @@ xhr.onload = () =>
         {
             id = element[2];
             iframe = document.createElement('iframe');
+            iframe.setAttribute('onload', 'this.style.height = parseInt(this.offsetWidth) + "px"');    
             iframe.src = 'https://bandcamp.com/EmbeddedPlayer/album='+id+'/size=large/bgcol=333333/linkcol=e32c14/minimal=true/transparent=true/';
             document.querySelector("#albums").appendChild(iframe);
         }
@@ -23,6 +24,7 @@ xhr.onload = () =>
         {
             id = element[2];
             iframe = document.createElement('iframe');
+            iframe.setAttribute('onload', 'this.style.height = parseInt(this.offsetWidth) + "px"'); 
             iframe.src = 'https://bandcamp.com/EmbeddedPlayer/track='+id+'/size=large/bgcol=333333/linkcol=e32c14/minimal=true/transparent=true/';
             document.querySelector("#albums").appendChild(iframe);
         }

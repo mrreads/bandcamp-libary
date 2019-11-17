@@ -16,22 +16,19 @@ body
     display: flex;
     justify-content: center;
     align-items: center;
+    margin: 5px
 }
 
 #albums
 {
-    margin: 5px;
     width: 100%;
-    display: flex;
-    flex-flow: row wrap;
-    justify-content: center;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    grid-gap: 5px;
 }
 
 iframe
 {
-    height: 311px;
-    width: 300px;
-    flex-grow: 1;
+    justify-self: stretch;
     border: 0;
-    margin: 5px;
 }
