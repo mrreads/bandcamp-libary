@@ -50,6 +50,6 @@
             $data = json_encode($data);
             $json = file_put_contents( __DIR__ . './../data.json', $data);
         }
-    } 
+    }
     header('Location: ./../index.html');
 ?>

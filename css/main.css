@@ -1,34 +1,151 @@
+@font-face
+{
+	font-family: "Helvetica Neue";
+
+	src: url("./../fonts/HelveticaNeue-CondensedRegular.woff") format("woff");
+}
+
 *
 {
-    padding: 0;
-    margin: 0;
-    box-sizing: border-box;
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
 }
 
 html, body
 {
-    width: 100%;
+	width: 100%;
 	min-width: 320px;
+}
+
+body, input
+{
+	font-family: "Helvetica Neue";
 }
 
 body
 {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 5px
+	display: flex;
+	align-items: center;
+	flex-flow: column nowrap;
+	justify-content: center;
+
+	background-image: url("./../img/background.jpg");
+	background-size: cover;
 }
 
 #albums
 {
-    width: 100%;
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    grid-gap: 5px;
+	display: grid;
+
+	width: 100%;
+	padding: 5px;
+
+	grid-gap: 5px;
+	grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
 }
 
 iframe
 {
-    justify-self: stretch;
-    border: 0;
+	border: 0;
+	box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+
+	justify-self: stretch;
+}
+
+footer
+{
+	display: flex;
+	align-items: center;
+	flex-flow: column nowrap;
+	justify-content: center;
+
+	width: 100%;
+	margin-top: 25px;
+	padding: 15px;
+
+	background-color: rgba(0, 0, 0, 0.3);
+}
+
+footer h1
+{
+	margin-bottom: 5px;
+}
+
+footer h1 span
+{
+	color: rgb(255, 130, 14);
+}
+
+form
+{
+	display: flex;
+	align-items: center;
+	flex-flow: row nowrap;
+	justify-content: center;
+
+	width: 300px;
+}
+
+form input
+{
+	height: 26px;
+
+	border: 0;
+}
+
+form input[type=text]
+{
+	width: 100%;
+	padding: 5px 15px 3px 15px;
+
+	cursor: pointer;
+	transition: 0.5s all;
+	text-align: center;
+
+	border-bottom: 2px solid rgba(0, 0, 0, 1);
+	background-color: rgba(255, 255, 255, 0);
+}
+
+form input[type=text]:hover
+{
+	background-color: rgba(255, 255, 255, 1);
+}
+
+form input[type=text]::placeholder
+{
+	font-size: 11px;
+
+	transition: 0.2s all;
+	text-align: center;
+
+	color: rgba(0, 0, 0, 0);
+}
+
+form input[type=text]:hover::placeholder
+{
+	font-size: 14px;
+
+	color: rgba(0, 0, 0, 0.6);
+}
+
+form input[type=submit]
+{
+	font-weight: bold;
+
+	padding: 5px 15px 0px 15px;
+
+	cursor: pointer;
+	transition: 0.5s all;
+
+	color: rgba(0, 0, 0, 0);
+	border-bottom: 2px solid rgba(255, 130, 14, 1);
+	background-color: rgba(255, 130, 14, 0);
+}
+
+
+form input[type=submit]:hover
+{
+	color: rgba(0, 0, 0, 1);
+	background-color: rgba(255, 130, 14, 1);
 }

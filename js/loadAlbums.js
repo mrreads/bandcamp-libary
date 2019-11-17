@@ -37,6 +37,7 @@ window.onresize = () =>
     allAlbums = document.querySelectorAll('iframe');
     allAlbums.forEach(element =>
     {
+        element.style.justifySelf = 'stretch';
         element.style.height = parseInt(element.offsetWidth) + 'px';
     });
 };
